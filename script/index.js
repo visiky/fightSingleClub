@@ -92,21 +92,7 @@
             setPrice();
         }
 
-        hotTabs.addEventListener("click", function (event) {
-            var e = event || window.event;
-            var tab = e.target || e.srcElement;
-            [].forEach.call(hotTabs.children, function (tab) {
-                tab.classList.remove('select');
-            });
-            tab.classList.add('select');
-            var target = tab.getAttribute('href');
-            var tabItems = document.getElementsByClassName('tab-item');
-            [].forEach.call(tabItems, function (tabItem) {
-                tabItem.classList.remove('choosed');
-            });
-            document.getElementById(target).classList.add('choosed');
-
-        });
+        
       
 
         //复制点单信息到粘贴板
@@ -214,6 +200,22 @@
                     return false;
                 }
             }, false);
+
+            hotTabs.addEventListener(event, function (event) {
+            var e = event || window.event;
+            var tab = e.target || e.srcElement;
+            [].forEach.call(hotTabs.children, function (tab) {
+                tab.classList.remove('select');
+            });
+            tab.classList.add('select');
+            var target = tab.getAttribute('href');
+            var tabItems = document.getElementsByClassName('tab-item');
+            [].forEach.call(tabItems, function (tabItem) {
+                tabItem.classList.remove('choosed');
+            });
+            document.getElementById(target).classList.add('choosed');
+
+        });
         }
 
 
