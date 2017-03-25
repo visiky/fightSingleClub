@@ -133,11 +133,10 @@ span#price,span#totalprice {
 #hotdrink .inner .tab {
     flex: 1;
     display: inline-block;
-    margin: 0 16px;
 }
 #hotdrink .inner .tab-item{
     display: none;
-    padding:10px 20px;
+    padding:10px 0px;
 }
 #hotdrink .inner .tab-item.choosed{
     display: block;
@@ -150,14 +149,11 @@ span#price,span#totalprice {
     line-height: 0;
 }
 #hotdrink .inner .tab-item>div p{
-font-size:1.2rem;
+font-size:1rem;
 text-align: center;
 color: rgb(244, 67, 54);
 font-weight: bolder;
 margin:0 0 8px;
-}
-#hotdrink .inner .tab-item>div img{
-    width:auto;
 }
 #hotdrink .inner .tab-item>div img.add {
     width: 1.6rem;
@@ -223,13 +219,15 @@ a#submitButton,a#addButton,.recommend a{
     font-size: 3.1vw;
     color: rgb(255, 211, 0);
 }
-
-button.remove{
+#car p{
+    height: 27px; 
+    margin: 2px 0; 
+}
+#car button.remove{
     float: right;
     background-color: rgb(244, 67, 54);
     color: rgb(244, 244, 244);
     border: none;
-    margin: 2px 0;
     border-radius: 3px;
     height: 27px;
     padding: 5px 15px;
