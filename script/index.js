@@ -350,10 +350,11 @@
             hotdrink_display = !hotdrink_display;
             hotdrink.style.height = hotdrink_display ? "auto" : "0";
         }
-
+//         取消订单
         function removeOrder(target, price, index) {
             car.removeChild(target);
             cupnum--;
+            num.innerHTML = cupnum;
             totalprice -= parseInt(price);
             setTotalPrice();
         }
@@ -364,7 +365,7 @@
             var ice = getRadioValue('ice');
             var sugar = getRadioValue('sugar');
             var add = getCheckboxValue('add'); //加料数组
-            //var text = "￥13 大杯波霸奶茶 常温微糖 加珍波椰";
+      
             var isIce = drink.indexOf("*仅限冷饮*");
             if (isIce != -1 && ice == "加热") {
                 alert("(´・ω・`)冷饮不可以加热噢");
