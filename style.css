@@ -149,16 +149,16 @@ span#price,span#totalprice {
     line-height: 0;
 }
 #hotdrink .inner .tab-item>div p{
-font-size:1rem;
+font-size:.8rem;
 text-align: center;
 color: rgb(244, 67, 54);
 font-weight: bolder;
 margin:0 0 8px;
 }
 #hotdrink .inner .tab-item>div img.add {
-    width: 1.6rem;
+    width: 1.4rem;
     cursor:pointer;
-    margin: 0px 0 -8px 16px;
+    margin: 0px 0 -8px 10px;
 }
 @media screen and (min-width:764px){
 #hotdrink .inner .tab-item>div{
