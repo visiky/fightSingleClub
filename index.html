@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telphone=yes" />`
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <link rel="shortcut icon" type="image/x-icon" href="image/logo.jpg" media="screen" />
+    <title>喜茶点单小助手</title>
+    <link rel="stylesheet" href="style.css">
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+        <img src='image/logo.jpg' />
+    </div>
+</head>
+
+<body>
+
+    <div id="order">
+        <!--<button id="english">英文版</button>-->
+        <div class="order-who">
+
+            <div id="where-div" class="where select">
+                <span id="where-span" class="select-span">我在图书馆</span>
+                <select id="where" class="select-option">
+                        <option>我在图书馆</option>
+                        <option>我在教学区</option>
+                        <option>我不在华工南校区</option>
+                        <option>我在C1</option>
+                        <option>我在C2</option>
+                        <option>我在C3</option>
+                        <option>我在C4</option>
+                        <option>我在C5</option>
+                        <option>我在C6</option>            
+                        <option>我在C7</option>
+                        <option>我在C8</option>               
+                        <option>我在C9</option>
+                        <option>我在C10</option>                 
+                        <option>我在C11</option>
+                        <option>我在C12</option>                
+                        <option>我在C13</option>
+                        <option>我在C14</option>                 
+                        <option>我在C15</option>
+                        <option>我在C16</option>
+                        <option>我在B区（学院楼）</option>
+                        <option>我在一饭</option>
+                        <option>我在二饭</option>
+                        
+                </select>
+            </div>
+            <div id="other" class="hide">
+                <input type="text" id="otherplace" placeholder="输入你的地点">
+            </div>
+
+            <div class="driver select">
+                <span id="driver-span" class="select-span">我要上车</span>
+                <select id="driver" class="select-option">
+                        <option>我要上车</option>
+                        <option>我要开车</option>
+                </select>
+            </div>
+
+        </div>
+
+
+
+        <div class="order-detail">
+            <div class="cut"></div>
+
+            <div class="recommend select2">
+
+                <a id="hotButton">人气推荐</a><a id="randomButton">随机选择</a>
+            </div>
+
+            <div id="hotdrink">
+                <div class="inner">
+                    <div class="tabs" id='hotTabs'>
+                        <a href="tab1" class="tab select">茗茶</a>
+                        <a href="tab2" class="tab">超级水果茶</a>
+                        <a href="tab3" class="tab">芝士特饮</a>
+                    </div>
+                    <div id="tab1" class='tab-item choosed'>
+                        <div>
+                            <img src="image/hc1-1.jpg" alt="绿妍"><p>绿妍<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc1-2.jpg" alt="红玉"><p>红玉<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc1-3.jpg" alt="脆珠红玉"><p>脆珠红玉<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc1-4.jpg" alt="金凤茶王"><p>金凤茶王<img src="./image/add.svg" class='add'></p>
+                        </div>
+                        <div>
+                        <img src="image/hc1-5.jpg" alt="四季春"><p>四季春<img src="./image/add.svg" class='add'></p></div>
+                    </div>
+                    <div id="tab2" class='tab-item'>
+                        <div>
+                            <img src="image/hc2-1.jpg" alt="超级水果绿妍"><p>超级水果绿妍<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc2-2.jpg" alt="满杯红柚"><p>满杯红柚<img src="./image/add.svg" class='add'></p></div>
+
+                        <div>
+                            <img src="image/hc2-3.jpg" alt="满杯红柚"><p>满杯黄柚<img src="./image/add.svg" class='add'></p></div>
+
+                        <div>
+                            <img src="image/hc2-4.jpg" alt="整颗爆柠绿茶"><p>整颗爆柠绿茶<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc2-5.jpg" alt="超级鲜桔柠"><p>超级鲜桔柠<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc2-6.jpg" alt="超级水果四季春"><p>超级水果四季春<img src="./image/add.svg" class='add'></p></div>
+                    </div>
+                    <div id="tab3" class='tab-item'>
+                        <div>
+                            <img src="image/hc3-1.jpg" alt="喜芝芝庄园可可"><p>喜芝芝庄园可可<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                           <img src="image/hc3-2.jpg" alt="奥利奥喜芝芝可可"><p>奥利奥喜芝芝可可<img src="./image/add.svg" class='add'></p></div>
+                        <div>
+                            <img src="image/hc3-3.jpg" alt="喜芝芝静冈抹茶"><p>喜芝芝静冈抹茶<img src="./image/add.svg" class='add'></p></div>
+                    </div>
+                </div>
+                <div class="cut"></div>
+
+
+
+            </div>
+     
+
+            <div class="drink select">
+                <span id="drink-span" class="select-span">绿妍</span>
+                <select id="drink" class="select-option">
+                            <!--使用js插入 option  -->
+                </select>
+            </div>
+            <div id="cup" class="select2">
+                <a class="checked">大杯</a>
+                <a>中杯</a>
+            </div>
+            <div id="ice" class="select2">
+                <a class="checked">正常</a>
+                <a>少冰</a>
+                <a>去冰</a>
+                <a>常温</a>
+                <a>加热</a>
+            </div>
+            <div id="sugar" class="select2">
+                <a class="checked">十分甜</a>
+                <a>九分甜</a>
+                <a>少糖</a>
+                <a>半糖</a>
+                <a>微糖</a>
+                <a>无糖</a>
+            </div>
+            <div id="add" class="select2">
+                <a>珍珠</a>
+                <a>波霸</a>
+                <a>椰果</a>
+                <a>仙草</a>
+                <a>红豆</a>
+            </div>
+            <span id="price">￥13</span><a id="addButton">确认添加</a>
+        </div>
+
+
+
+
+        <div class="car">
+
+            <div class="cut"></div>
+            <span>已点 <span id="num">0</span>&nbsp;杯</span>
+            <!--背景右部放上箭头-->
+            <span id="totalprice">￥0</span>
+            <a id="submitButton">去粘贴</a>
+            <div id="car">
+            </div>
+        </div>
+
+        <div id="contact" class="hide">
+            <div class="cut"></div>
+            <input id="how2pay" type="text" placeholder="支付宝收款请为乘客留下账号">
+        </div>
+
+    </div>
+
+    <script src="script/clipboard.min.js"></script>
+    <script src="script/index.js"></script>
+
+
+
+</body>
+
+</html>

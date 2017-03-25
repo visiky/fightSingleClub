@@ -1,0 +1,251 @@
+
+body {
+  font-family: "Microsoft YaHei", "å¾®è½¯é›…é»‘",Helvetica, Tahoma, Arial, STXihei, "åŽæ–‡ç»†é»‘",  SimSun, "å®‹ä½“", Heiti, "é»‘ä½“", sans-serif;
+  padding: 0 5vw;
+    background:url('./image/mask.jpg');
+    color: rgb(254, 77, 61);
+    -moz-user-select:none;/*ç«ç‹*/
+    -webkit-user-select:none;/*webkitæµè§ˆå™¨*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*æ—©æœŸæµè§ˆå™¨*/
+    user-select:none;
+    
+}
+
+header {
+    height: 20vw;
+    text-align: center;
+}
+header img {
+    height: 100%;
+}
+
+
+#order {
+    padding: 5vw 5vw 5vw 5vw;
+    background-color: white;
+    border-top: 10vw solid rgb(255, 211, 0);
+    border-radius: 15px;
+    margin-bottom: 10vw;
+    
+
+}
+.cut {
+    border-bottom: 0.01px solid #e8e8e8;
+    padding-bottom: 10px;
+    margin-bottom: 17px;
+    clear: both;
+}
+
+.select,#other{
+    text-align: center;    
+    background-color: #F4F4F4; 
+    width: 100%;
+    height: 9vw;
+    border-radius: 1.3333vw;
+    margin-bottom: 2.5vw;
+    border: 1px solid #F4F4F4;
+    overflow: hidden;
+}
+input#otherplace {
+    width: 90%;
+    background-color: #F4F4F4;
+    border-radius: 1.3333vw;
+    border: 0;
+    line-height: 8vw;
+    color: rgb(255, 211, 0);
+    font-size: 3.4vw;
+    text-align: center;
+}
+
+a {
+    font-size: 3.3vw;
+    display: inline-block;
+    border-radius: 1.3333vw;
+    text-align: center;
+    line-height: 9vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: gray;
+}
+a:active,a:focus {
+    opacity: 0.8;
+}
+.select2 {
+    display: flex;
+    margin-bottom: 2.5vw;
+}
+.select2 a {
+    flex: 1;
+    border: 1px solid #afafaf;
+    margin-right: 5px;
+}
+
+.select2 a:last-child {
+    margin-right: 0;
+}
+.select2 a.checked {
+    background-color: rgb(255, 211, 0);
+    color: #F4F4F4;
+    border: 1px solid rgb(255, 211, 0);
+}
+.select select {  
+    position: absolute;  
+    left: 12%;  
+    display: inline-block;  
+    width:76%;   
+    opacity: 0;
+    height: 9vw;
+    margin-bottom: 5.176vw;
+}
+.select span{
+    font-size: 3.4vw;
+    line-height: 9vw;
+    display: inline-block;
+}
+
+.drink {
+    color: rgb(255, 211, 0);
+}
+span#price,span#totalprice {
+    color: #ff6b25;
+    margin-right: 12px;
+    font-weight: bolder;
+    font-size: 1.15em;
+}
+/* for slidedown */
+#hotdrink {
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.8s ease;
+    -webkit-transition: height 0.8s ease;
+    -moz-transition: height 0.8s ease;
+    -o-transition: height 0.8s ease;
+}
+
+#hotdrink .inner .tabs{
+    display: flex;
+}
+#hotdrink .inner .tab.select{
+    color: rgb(244, 67, 54);
+}
+#hotdrink .inner .tab {
+    flex: 1;
+    display: inline-block;
+    margin: 0 16px;
+}
+#hotdrink .inner .tab-item{
+    display: none;
+    padding:10px 20px;
+}
+#hotdrink .inner .tab-item.choosed{
+    display: block;
+}
+#hotdrink .inner .tab-item>div{
+    display: inline-block;
+    width:48%;
+}
+#hotdrink .inner .tab-item>div a{
+    line-height: 0;
+}
+#hotdrink .inner .tab-item>div p{
+font-size:1.2rem;
+text-align: center;
+color: rgb(244, 67, 54);
+font-weight: bolder;
+margin:0 0 8px;
+}
+#hotdrink .inner .tab-item>div img{
+    width:auto;
+}
+#hotdrink .inner .tab-item>div img.add {
+    width: 1.6rem;
+    cursor:pointer;
+    margin: 0px 0 -8px 16px;
+}
+@media screen and (min-width:764px){
+#hotdrink .inner .tab-item>div{
+    width:32%;
+}
+}
+@media screen and (min-width:1000px){
+#hotdrink .inner .tab-item>div{
+    width:24%;
+}
+}
+#hotdrink .inner img {
+    width: 100%;
+}
+
+
+
+a#submitButton,a#addButton,.recommend a{
+        border: none;
+    background-color: rgb(255, 211, 0);
+    color: rgb(255, 255, 255);
+    width: 33%;
+    float: right;
+    line-height: 1;
+    padding: 12px;
+}
+
+#contact {
+    text-align: center;
+    color: rgb(255, 211, 0);
+    margin-bottom: 5vw;
+    font-size: 3.3vw;
+}
+
+#contact input {
+    width: 53vw;
+    height: 8vw;
+    border-radius: 2vw;
+    border:3px solid rgb(255, 211, 0);
+    -webkit-appearance: none;
+    appearance:none;
+    font-size: 2.8vw;
+    padding-left: 5vw;
+}
+
+.car {
+    color: gray;
+    margin-bottom: 8vw;
+}
+
+.hide {
+    display: none;
+}
+
+#car {
+    margin-top: 35px;
+    clear: both;
+    font-size: 3.1vw;
+    color: rgb(255, 211, 0);
+}
+
+button.remove{
+    float: right;
+    background-color: rgb(244, 67, 54);
+    color: rgb(244, 244, 244);
+    border: none;
+    margin: 2px 0;
+    border-radius: 3px;
+    height: 27px;
+    padding: 5px 15px;
+}
+/*全局滚动轮样式*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px transparent;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 247);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px #e1e1e2;
+    background-color: rgb(225, 225, 226);
+}
+::-webkit-scrollbar {
+    width: 1px;
+    background-color: rgb(245, 245, 245);
+}
