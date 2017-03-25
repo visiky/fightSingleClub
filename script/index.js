@@ -21,9 +21,8 @@
         var num = document.getElementById('num');
         var car = document.getElementById('car');
         var cupnum = parseInt(document.getElementById('num').innerHTML); //总杯数
-        var drinkId=0;
+        var drinkId = 0;
         var drinklist = [];
-        var orderText = [];
         var curprice = 13;
         var totalprice = 0;
         var hotdrink_display = false;
@@ -92,8 +91,8 @@
             setPrice();
         }
 
-        
-      
+
+
 
         //复制点单信息到粘贴板
         new Clipboard(submitButton, {
@@ -110,14 +109,17 @@
                 } else {
                     var text = where + "求车！\n";
                 }
-                text += orderText.join("\n");
-                if (orderText.length >= 2) {
+                [].forEach.call(car.children, function (item) {
+                    text += item.innerText.slice(0,-2);
+                    text+="\n";
+                });
+                
                     text += "\n一共￥" + totalprice;
-                }
+           
                 if (isDriver && how2pay) {
                     text += "\n【支付宝账号：" + how2pay + "】";
                 }
-                if (orderText.length === 0) {
+                if (car.children.length === 0) {
                     alert('(´・ω・`)客官不喝点什么吗');
                     return false;
                 } else {
@@ -191,8 +193,8 @@
             //选择人气饮料按钮
             hotdrink.addEventListener(event, function (e) {
                 e.preventDefault();
-                if (e.target.className=="add") {
-                    var drink = e.target.previousSibling.innerText|| e.target.previousSibling.textContent;
+                if (e.target.className == "add") {
+                    var drink = e.target.previousSibling.innerText || e.target.previousSibling.textContent;
                     changeSpan(drink);
                     hotdrink_display = !hotdrink_display;
                     hotdrink.style.height = hotdrink_display ? "auto" : "0";
@@ -202,20 +204,20 @@
             }, false);
 
             hotTabs.addEventListener(event, function (event) {
-            var e = event || window.event;
-            var tab = e.target || e.srcElement;
-            [].forEach.call(hotTabs.children, function (tab) {
-                tab.classList.remove('select');
-            });
-            tab.classList.add('select');
-            var target = tab.getAttribute('href');
-            var tabItems = document.getElementsByClassName('tab-item');
-            [].forEach.call(tabItems, function (tabItem) {
-                tabItem.classList.remove('choosed');
-            });
-            document.getElementById(target).classList.add('choosed');
+                var e = event || window.event;
+                var tab = e.target || e.srcElement;
+                [].forEach.call(hotTabs.children, function (tab) {
+                    tab.classList.remove('select');
+                });
+                tab.classList.add('select');
+                var target = tab.getAttribute('href');
+                var tabItems = document.getElementsByClassName('tab-item');
+                [].forEach.call(tabItems, function (tabItem) {
+                    tabItem.classList.remove('choosed');
+                });
+                document.getElementById(target).classList.add('choosed');
 
-        });
+            });
         }
 
 
@@ -343,17 +345,19 @@
                 }
             }
         }
-        
+
         function clickHotButton() {
             hotdrink_display = !hotdrink_display;
             hotdrink.style.height = hotdrink_display ? "auto" : "0";
         }
-        function removeOrder(target,price){
+
+        function removeOrder(target, price, index) {
             car.removeChild(target);
             cupnum--;
             totalprice -= parseInt(price);
             setTotalPrice();
         }
+
         function clickAddButton() {
             var drink = getSelectValue('drink');
             var cup = getRadioValue('cup');
@@ -369,7 +373,7 @@
                 drink = drink.replace("*仅限冷饮*", "");
             }
             var text = "￥" + curprice + " " + cup + drink + " " + ice + sugar + " " + add.join("");
-            var htmltext = `<p id="orderDrink${drinkId}">${text}<button class="remove" onclick="removeOrder(orderDrink${drinkId},${curprice})">取消</button></p>`;
+            var htmltext = `<p id="orderDrink${drinkId}">${text}<button class="remove" onclick="removeOrder(orderDrink${drinkId},${curprice},${cupnum})">取消</button></p>`;
             document.getElementById("price").innerHTML = "￥" + curprice;
             totalprice += parseInt(curprice);
             setTotalPrice();
@@ -377,5 +381,4 @@
             drinkId++;
             num.innerHTML = cupnum;
             car.innerHTML += htmltext;
-            orderText.push(text);
         }
